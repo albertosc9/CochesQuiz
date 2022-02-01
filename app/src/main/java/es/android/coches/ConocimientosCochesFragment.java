@@ -53,7 +53,7 @@ public class ConocimientosCochesFragment extends Fragment {
     int respuestaCorrecta;
     int puntuacion;
     int puntuacionMaxima=0;
-
+    JSONObject objJson;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -77,14 +77,14 @@ public class ConocimientosCochesFragment extends Fragment {
                     fileContent = br.readLine();
                 }
 
-               JSONObject objJson = new JSONObject(sb.toString());
+                objJson = new JSONObject(sb.toString());
                 String puntuacion = objJson.getString("puntuacionMaxima");
                puntuacionMaxima = Integer.parseInt(puntuacion);
 
 
             }else {
 
-                JSONObject objJson = new JSONObject();
+                objJson = new JSONObject();
                 objJson = objJson.put("puntuacionMaxima",puntuacionMaxima);
                 objJson = objJson.put("ultima puntuacion",puntuacion);
                 salvarFichero("puntuaciones.json",objJson.toString());
@@ -194,7 +194,7 @@ public class ConocimientosCochesFragment extends Fragment {
             }
         } else {
 
-            JSONObject objJson = new JSONObject();
+            objJson = new JSONObject();
             if (puntuacionMaxima<puntuacion){
 
 
@@ -209,7 +209,7 @@ public class ConocimientosCochesFragment extends Fragment {
                 binding.bandera.setVisibility(View.GONE);
                 binding.radioGroup.setVisibility(View.GONE);
                 binding.botonRespuesta.setVisibility(View.GONE);
-                binding.textView.setText("Has batido tu record ¡FIN! "+puntuacion);
+                binding.textView.setText("Has batido tu record \n"+puntuacion);
             }else{
                 try {
                     objJson = objJson.put("puntuacionMaxima",puntuacionMaxima);
@@ -223,7 +223,7 @@ public class ConocimientosCochesFragment extends Fragment {
                 binding.bandera.setVisibility(View.GONE);
                 binding.radioGroup.setVisibility(View.GONE);
                 binding.botonRespuesta.setVisibility(View.GONE);
-                binding.textView.setText("No Has batido tu record ¡FIN! "+puntuacion);
+                binding.textView.setText("No Has batido tu record \n"+puntuacion);
             }
 
 
