@@ -209,7 +209,7 @@ public class ConocimientosCochesFragment extends Fragment {
                 binding.bandera.setVisibility(View.GONE);
                 binding.radioGroup.setVisibility(View.GONE);
                 binding.botonRespuesta.setVisibility(View.GONE);
-                binding.textView.setText("Has batido tu record \n"+puntuacion);
+                binding.textView.setText("Has batido tu record \n"+"Puntuación conseguida: "+puntuacion);
             }else{
                 try {
                     objJson = objJson.put("puntuacionMaxima",puntuacionMaxima);
@@ -223,7 +223,7 @@ public class ConocimientosCochesFragment extends Fragment {
                 binding.bandera.setVisibility(View.GONE);
                 binding.radioGroup.setVisibility(View.GONE);
                 binding.botonRespuesta.setVisibility(View.GONE);
-                binding.textView.setText("No Has batido tu record \n"+puntuacion);
+                binding.textView.setText("No has batido tu record \n"+"Puntuación conseguida: "+puntuacion);
             }
 
 
