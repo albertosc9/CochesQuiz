@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<coches>
+    <coche nombre="seat">
+        <nombre_mostrar>Seat</nombre_mostrar>
+        <logo>seat</logo>
+    </coche>
+    <coche nombre="bmw">
+        <nombre_mostrar>bmw</nombre_mostrar>
+        <logo>bmw</logo>
+    </coche>
+    <coche nombre="mercedes">
+        <nombre_mostrar>mercedes</nombre_mostrar>
+        <logo>mercedes</logo>
+    </coche>
+    <coche nombre="tesla">
+        <nombre_mostrar>tesla</nombre_mostrar>
+        <logo>tesla</logo>
+    </coche>
+    <coche nombre="chevrolet">
+        <nombre_mostrar>chevrolet</nombre_mostrar>
+        <logo>chevrolet</logo>
+    </coche>
+    <coche nombre="acura">
+        <nombre_mostrar>acura</nombre_mostrar>
+        <logo>acura</logo>
+    </coche>
+
+
+</coches>
