@@ -51,7 +51,7 @@ public class ConocimientosCochesFragment extends Fragment {
 
     List<PreguntaLogo> preguntas;
     int respuestaCorrecta;
-    int puntuacion;
+    int puntuacion=0;
     int puntuacionMaxima=0;
     JSONObject objJson;
 
@@ -78,8 +78,8 @@ public class ConocimientosCochesFragment extends Fragment {
                 }
 
                 objJson = new JSONObject(sb.toString());
-                String puntuacion = objJson.getString("puntuacionMaxima");
-               puntuacionMaxima = Integer.parseInt(puntuacion);
+                String puntuacionMax = objJson.getString("puntuacionMaxima");
+               puntuacionMaxima = Integer.parseInt(puntuacionMax);
 
 
             }else {
